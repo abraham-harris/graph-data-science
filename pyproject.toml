@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "class-exercises"
+description = "A collection of Jupyter notebooks and exercises for use in CS 575"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+"numpy",
+"matplotlib",
+"pydot",
+"ipykernel",
+"networkx",
+"pandas",
+"scipy",
+"gensim",
+"python-louvain",
+"scikit-learn",
+]
+
+
+#[project.scripts]
+#project1 = "project1.project1:project1cli"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "mypy",
+]
+ml = [
+  "torch>=2.2",
+  "torch-geometric>=2.4",
+]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/mypy.toml"
+
+[tool.mypy]
+exclude = [
+  "^test",
+]
+check_untyped_defs = true
+strict = true
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-report ndiff"

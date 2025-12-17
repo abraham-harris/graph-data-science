@@ -1,0 +1,81 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache/artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+.dist-info/
+
+# Packaging/build
+.build/
+build/
+dist/
+.eggs/
+
+develop-eggs/
+parts/
+sdist/
+var/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Logs & coverage
+logs/
+*.log
+.coverage
+coverage.xml
+htmlcov/
+
+# Type checker & linters caches
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.pytest_cache/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# Local environment
+.env
+.env.*
+
+# Data and outputs (keep folder, ignore contents)
+# Place datasets and large files here
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Model artifacts & large binaries
+*.pt
+*.pth
+*.onnx
+*.h5
+*.npz
+*.npy
+*.pkl
+*.joblib
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.bz2
