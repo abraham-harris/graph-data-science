@@ -13,22 +13,24 @@ def test_hw4_problem_1() -> None:
     # When
     ## Modify these values
     m = 1       # Probability of meeting
-    p = 0.4     # Transmission rate
-    gamma = 0.1 # Recovery rate
+    p = 0.95     # Transmission rate
+    gamma = 0.01 # Recovery rate
     N = 1000
     s0 = N-1
     i0 = 1
     r0 = 0
     dt = 0.1
     duration = 140
-    my_simulation: SIR_simulation = SIR_simulation(m,
-                                        p,
-                                        gamma,
-                                        dt,
-                                        duration,
-                                        s0,
-                                        i0,
-                                        r0)
+    my_simulation: SIR_simulation = SIR_simulation(
+        m,
+        p,
+        gamma,
+        dt,
+        duration,
+        s0,
+        i0,
+        r0
+    )
     my_simulation.run_simulation()
     # Then
     infectious_history = my_simulation.I
