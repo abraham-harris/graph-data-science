@@ -11,9 +11,14 @@ def test_homework_problem_katz_vs_pagerank() -> None:
 
     # Create graph (STUDENT IMPLEMENTS THIS)
     adjacency_list: dict[int, set[int]] = {
-        # Example structure students must design
-        # 1: {...},
-        # ...
+        1: {8},
+        2: {8},
+        3: {8},
+        4: {8},
+        5: {8},
+        6: {8},
+        7: {8},
+        8: {1, 2, 3, 4, 5, 6, 7},
     }
     G = adjacency_list_to_digraph(adjacency_list)
 
