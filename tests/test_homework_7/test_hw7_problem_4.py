@@ -11,11 +11,18 @@ def test_hw7_problem_4() -> None:
     # Build graph
     G: nx.Graph = nx.Graph()
     # TODO: Add vertices
-
-    # TODO: Add edges
-
-    # TODO: Define partition
-    partition: Tuple[Set[Hashable], ...] = ()
+    G.add_nodes_from([i for i in range(1, 13)])
+    # Add edges
+    G.add_edges_from([
+        (1,2), (2,3), (3,4), (4,1),
+        (5,6), (6,7), (7,8), (8,5),
+        (9,10), (10,11), (11,12), (12,9),
+        (4,5), (8,9)
+    ])
+    # Define partition
+    partition: Tuple[Set[Hashable], ...] = (
+        set([1, 2, 3, 4]), set([5, 6, 7, 8]), set([9, 10, 11, 12])
+    )
 
     # Validate structure
     assert isinstance(G, nx.Graph)

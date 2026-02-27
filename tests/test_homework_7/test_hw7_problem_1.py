@@ -11,11 +11,11 @@ def test_hw7_problem_1() -> None:
     # Build graph
     G: nx.Graph = nx.Graph()
     # TODO: Add vertices
-
+    G.add_nodes_from([1, 2, 3, 4, 5, 6])
     # TODO: Add edges
-
+    G.add_edges_from([(1,2), (2,3), (3,4), (4,5), (5,6), (6,1), (1,4), (3,6)])
     # TODO: Define partition
-    partition: Tuple[Set[Hashable], ...] = ()
+    partition: Tuple[Set[Hashable], ...] = (set([1, 2, 3]), set([4, 5, 6]))
 
     # Validate structure
     assert isinstance(G, nx.Graph)
