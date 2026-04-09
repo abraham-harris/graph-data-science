@@ -27,6 +27,7 @@ var/
 
 # Virtual environments
 .venv/
+.575env/
 venv/
 ENV/
 env/
